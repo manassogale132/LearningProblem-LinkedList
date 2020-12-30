@@ -3,7 +3,7 @@ import org.junit.Assert;
 
 public class MyLinkedListTest {
 	
-	@Test
+	@Test                                                                                             //UC2
 	public void given3NumbersWhenAddedToLinkedListShouldBeAddedToTop() {                             //My Nodes:56->30->70
 	
 		MyNode<Integer> myFirstNode = new MyNode<Integer>(70);
@@ -16,7 +16,7 @@ public class MyLinkedListTest {
 		myLinkedList.add(myThirdNode);
 		myLinkedList.printMyNodes();
 		
-		boolean result = myLinkedList.head.equals(myThirdNode)&&
+		boolean result = myLinkedList.head.equals(myThirdNode)&&                                    //TestCase
 				         myLinkedList.head.getNext().equals(mySecondNode)&&
 				         myLinkedList.tail.equals(myFirstNode);
 		
@@ -24,7 +24,7 @@ public class MyLinkedListTest {
 	}
 	
 	
-	@Test
+	@Test                                                                                          //UC3       
 	public void given3NumbersWhenAppendedTShouldBeAddedToLast() {                                 //My Nodes:56->30->70
 	
 		MyNode<Integer> myFirstNode = new MyNode<Integer>(56);
@@ -37,15 +37,15 @@ public class MyLinkedListTest {
 		myLinkedList.append(myThirdNode);
 		myLinkedList.printMyNodes();
 		
-		boolean result = myLinkedList.head.equals(myFirstNode)&&
+		boolean result = myLinkedList.head.equals(myFirstNode)&&                                  //TestCase
 				         myLinkedList.head.getNext().equals(mySecondNode)&&
 				         myLinkedList.tail.equals(myThirdNode);
 		
 		Assert.assertTrue(result);
 	}
 	
-	@Test
-	public void given3NumbersWhenInsertingShouldBePassLinkedListResult() {                                //My Nodes:56->30->70
+	@Test                                                                                            //UC4                                                                     
+	public void given3NumbersWhenInsertingShouldBePassLinkedListResult()                            //My Nodes:56->30->70
 	
 		MyNode<Integer> myFirstNode = new MyNode<Integer>(56);
 		MyNode<Integer> mySecondNode = new MyNode<Integer>(30);
@@ -56,14 +56,14 @@ public class MyLinkedListTest {
 		myLinkedList.insert(myFirstNode,mySecondNode);
 		myLinkedList.printMyNodes();
 		
-		boolean result = myLinkedList.head.equals(myFirstNode)&&
+		boolean result = myLinkedList.head.equals(myFirstNode)&&                                 //TestCase
 				         myLinkedList.head.getNext().equals(mySecondNode)&&
 				         myLinkedList.tail.equals(myThirdNode);
 		
 		Assert.assertTrue(result);
 	}
 	
-	@Test
+	@Test                                                                                                   //UC5
 	public void given3NumbersWhenDeleteShouldBePassLinkedListResult() {                                    //My Nodes:30->70
 	
 		MyNode<Integer> myFirstNode = new MyNode<Integer>(56);
@@ -76,9 +76,30 @@ public class MyLinkedListTest {
 	
 		myLinkedList.printMyNodes();
 		
-		boolean result = myLinkedList.head.equals(mySecondNode)&&
+		boolean result = myLinkedList.head.equals(mySecondNode)&&                                //TestCase
 				         myLinkedList.head.getNext().equals(myThirdNode)&&
 				         myLinkedList.tail.equals(myThirdNode);
+		
+		Assert.assertTrue(result);
+	}
+	
+	
+	@Test                                                                                                   //U6
+	public void given3NumbersWhenDeleteLastNodeShouldBePassLinkedListResult() {                            // My Nodes:56->30
+	
+		MyNode<Integer> myFirstNode = new MyNode<Integer>(56);
+		MyNode<Integer> mySecondNode = new MyNode<Integer>(30);
+		MyNode<Integer> myThirdNode = new MyNode<Integer>(70);
+		MyLinkedList myLinkedList = new MyLinkedList();
+		myLinkedList.append(myFirstNode);
+		myLinkedList.append(mySecondNode);
+		System.out.println(" ");
+		System.out.println("UC6");
+		myLinkedList.printMyNodes();
+		
+		boolean result = myLinkedList.head.equals(myFirstNode)&&                                   //TestCase
+				         myLinkedList.head.getNext().equals(mySecondNode)&&
+				         myLinkedList.tail.equals(mySecondNode);
 		
 		Assert.assertTrue(result);
 	}
