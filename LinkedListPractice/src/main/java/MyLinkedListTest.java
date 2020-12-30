@@ -3,7 +3,7 @@ import org.junit.Assert;
 
 public class MyLinkedListTest {
 	
-	
+	private MyNode<Integer> linkedlist;
 	@Test                                                                                             //UC2
 	public void given3NumbersWhenAddedToLinkedListShouldBeAddedToTop() {                             //My Nodes:56->30->70
 	
@@ -89,7 +89,7 @@ public class MyLinkedListTest {
 	}
 	
 	
-	@Test                                                                                                   //U6
+	@Test                                                                                                   //UC6
 	public void given3NumbersWhenDeleteLastNodeShouldBePassLinkedListResult() {                            // My Nodes:56->30
 	
 		MyNode<Integer> myFirstNode = new MyNode<Integer>(56);
@@ -107,6 +107,53 @@ public class MyLinkedListTest {
 				         myLinkedList.tail.equals(mySecondNode);
 		
 		Assert.assertTrue(result);
+	}
+	
+	@Test                                                                                  //UC7
+	public void addThreeNumbersAndSearchRequiredNumber() {                                 //My Nodes:30
+		
+		LinkedList<Integer> linkedlist = new LinkedList<Integer>();
+		linkedlist.add(56);
+		linkedlist.add(30);
+		linkedlist.add(70);
+		
+		Iterator itr = linkedlist.iterator();
+		while(itr.hasNext()) {
+			if((Integer) itr.next() == 30) {
+				System.out.println(" ");
+				System.out.println("UC7");
+				System.out.println("My Nodes:30");
+				
+			}
+		}		
+
+	boolean result = linkedlist.equals(56)&&                                               ////FalseTestCase
+			linkedlist.equals(30)&&
+			linkedlist.equals(70);
+
+	Assert.assertFalse(result);    
+	}
+	
+	@Test                                                                                 //UC8
+	public void addThreeNumbersAndAddBetweenValues() {                                   //My Nodes:[56, 30, 40, 70]
+		
+		LinkedList<Integer> linkedlist = new LinkedList<Integer>();
+		linkedlist.add(56);
+		linkedlist.add(30);
+		linkedlist.add(70);
+		
+		linkedlist.add(2, 40);
+		
+		System.out.println(" ");
+		System.out.println("UC8");
+		System.out.println(linkedlist);
+		
+
+	boolean result = linkedlist.equals(56)&&                                           //FalseTestCase
+			linkedlist.equals(30)&&
+			linkedlist.equals(70);
+
+	Assert.assertFalse(result);    
 	}
 
 }
