@@ -66,28 +66,5 @@ public class MyLinkedListTest {
 		Assert.assertTrue(result);
 	}
 
-	
-	@Test                                                                                                   //UC5
-	public void given3NumbersWhenDeleteFirstShouldBePassLinkedListResult() {                                    //My Nodes:30->70
-	
-		MyNode<Integer> myFirstNode = new MyNode<Integer>(56);
-		MyNode<Integer> mySecondNode = new MyNode<Integer>(30);
-		MyNode<Integer> myThirdNode = new MyNode<Integer>(70);
-		 
-		 MyLinkedList myLinkedList = new MyLinkedList();
-		myLinkedList.add(myFirstNode);
-		myLinkedList.pop();
-		myLinkedList.add(myThirdNode);
-		myLinkedList.add(mySecondNode);
-		myLinkedList.printMyNodes();
-		
-		boolean result = myLinkedList.head.equals(mySecondNode)&&                                //TestCase
-				         myLinkedList.head.getNext().equals(myThirdNode)&&
-				         myLinkedList.tail.equals(myThirdNode);
-		
-		Assert.assertTrue(result);
-	}
-	
-
 
 }
