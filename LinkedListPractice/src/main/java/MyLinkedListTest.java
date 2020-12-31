@@ -111,30 +111,7 @@ public class MyLinkedListTest {
 		Assert.assertTrue(result);
 	}
 	
-	@Test                                                                                  //UC7
-	public void addThreeNumbersAndSearchRequiredNumber() {                                 //My Nodes:30
-		
-		LinkedList<Integer> linkedlist = new LinkedList<Integer>();
-		linkedlist.add(56);
-		linkedlist.add(30);
-		linkedlist.add(70);
-		
-		Iterator itr = linkedlist.iterator();
-		while(itr.hasNext()) {
-			if((Integer) itr.next() == 30) {
-				System.out.println(" ");
-				System.out.println("UC7");
-				System.out.println("My Nodes:30");
-				
-			}
-		}		
 
-	boolean result = linkedlist.equals(56)&&                                               ////FalseTestCase
-			linkedlist.equals(30)&&
-			linkedlist.equals(70);
-
-	Assert.assertFalse(result);    
-	}
 	
 
 
