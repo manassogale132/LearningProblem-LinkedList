@@ -136,26 +136,6 @@ public class MyLinkedListTest {
 	Assert.assertFalse(result);    
 	}
 	
-	@Test                                                                                 //UC8
-	public void addThreeNumbersAndAddBetweenValues() {                                   //My Nodes:[56, 30, 40, 70]
-		
-		LinkedList<Integer> linkedlist = new LinkedList<Integer>();
-		linkedlist.add(56);
-		linkedlist.add(30);
-		linkedlist.add(70);
-		
-		linkedlist.add(2, 40);
-		
-		System.out.println(" ");
-		System.out.println("UC8");
-		System.out.println(linkedlist);
-		
 
-	boolean result = linkedlist.equals(56)&&                                           //FalseTestCase
-			linkedlist.equals(30)&&
-			linkedlist.equals(70);
-
-	Assert.assertFalse(result);    
-	}
 
 }
