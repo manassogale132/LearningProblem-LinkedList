@@ -75,10 +75,10 @@ public class MyLinkedListTest {
 		MyNode<Integer> myThirdNode = new MyNode<Integer>(70);
 		 
 		 MyLinkedList myLinkedList = new MyLinkedList();
-		myLinkedList.append(mySecondNode);
-		myLinkedList.append(myThirdNode);
-
-	
+		myLinkedList.add(myFirstNode);
+		myLinkedList.pop();
+		myLinkedList.add(myThirdNode);
+		myLinkedList.add(mySecondNode);
 		myLinkedList.printMyNodes();
 		
 		boolean result = myLinkedList.head.equals(mySecondNode)&&                                //TestCase
@@ -97,8 +97,10 @@ public class MyLinkedListTest {
 		MyNode<Integer> myThirdNode = new MyNode<Integer>(70);
 		 
 		MyLinkedList myLinkedList = new MyLinkedList();
-		myLinkedList.append(myFirstNode);
-		myLinkedList.append(mySecondNode);
+		myLinkedList.add(myFirstNode);
+		myLinkedList.add(mySecondNode);
+		myLinkedList.add(myThirdNode);
+		myLinkedList.pop();
 	
 		myLinkedList.printMyNodes();
 		
