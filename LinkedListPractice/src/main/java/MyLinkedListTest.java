@@ -68,7 +68,7 @@ public class MyLinkedListTest {
 
 	
 	@Test                                                                                                   //UC5
-	public void given3NumbersWhenDeleteShouldBePassLinkedListResult() {                                    //My Nodes:30->70
+	public void given3NumbersWhenDeleteFirstShouldBePassLinkedListResult() {                                    //My Nodes:30->70
 	
 		MyNode<Integer> myFirstNode = new MyNode<Integer>(56);
 		MyNode<Integer> mySecondNode = new MyNode<Integer>(30);
